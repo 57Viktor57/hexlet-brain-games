@@ -15,11 +15,11 @@ const game = (func, userName) => {
     if (data.compare) {
       console.log('Correct!');
     } else {
-      console.log(`'${data.userAnswer}' is wrong answer ;(. Correct answer was '${
-        data.answer}'.\nLet's try again, ${userName}!`);
-      return;
+      return `'${data.userAnswer}' is wrong answer ;(. Correct answer was '${
+        data.answer}'.\nLet's try again, ${userName}!`
     }
   }
+  return `Congratulations, ${userName}!`
 };
 
 console.log('Welcome to the Brain Games!');
@@ -30,9 +30,7 @@ const brainEven = () => {
   const userName = whoAreYou();
   console.log(`Hello, ${userName}!\n`);
 
-  game(evenYesOrNo, userName);
-
-  console.log(`Congratulations, ${userName}!`);
+  console.log(game(evenYesOrNo, userName));
 };
 
 const brainCalc = () => {
@@ -41,9 +39,7 @@ const brainCalc = () => {
   const userName = whoAreYou();
   console.log(`Hello, ${userName}!\n`);
 
-  game(calc, userName);
-
-  console.log(`Congratulations, ${userName}!`);
+  console.log(game(calc, userName));
 };
 
 export { brainEven, brainCalc };
