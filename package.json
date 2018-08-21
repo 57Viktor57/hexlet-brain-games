@@ -1,6 +1,6 @@
 {
   "name": "viktor_ku_hexlet_project",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Viktor Kugay first hexlet project",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
@@ -44,7 +44,6 @@
     "eslint-plugin-import": "^2.14.0"
   },
   "dependencies": {
-    "readline-sync": "^1.4.9",
-    "viktor_ku_hexlet_project": "^1.0.6"
+    "readline-sync": "^1.4.9"
   }
 }

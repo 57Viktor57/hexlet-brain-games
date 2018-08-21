@@ -12,7 +12,7 @@ export default () => {
 
   data.userAnswer = readlineSync.question('Your answer: ');
   data.answer = eval(question);
-  data.compare = parseInt(data.userAnswer) === data.answer;
+  data.compare = parseInt(data.userAnswer, 10) === data.answer;
 
   return data;
 };

@@ -16,10 +16,10 @@ const game = (func, userName) => {
       console.log('Correct!');
     } else {
       return `'${data.userAnswer}' is wrong answer ;(. Correct answer was '${
-        data.answer}'.\nLet's try again, ${userName}!`
+        data.answer}'.\nLet's try again, ${userName}!`;
     }
   }
-  return `Congratulations, ${userName}!`
+  return `Congratulations, ${userName}!`;
 };
 
 console.log('Welcome to the Brain Games!');
