@@ -24,11 +24,6 @@ const game = (func, userName) => {
 
 console.log('Welcome to the Brain Games!');
 
-const brainGames = () => {
-  const userName = whoAreYou();
-  console.log(`Hello, ${userName}!`);
-};
-
 const brainEven = () => {
   console.log(rules.brainEven);
 
