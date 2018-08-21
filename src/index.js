@@ -46,4 +46,4 @@ const brainCalc = () => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export { brainEven, brainGames, brainCalc };
+export { brainEven, brainCalc };
