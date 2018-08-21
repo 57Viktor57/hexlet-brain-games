@@ -11,9 +11,14 @@
 ```sh
 $ make install
 ```
-## asciinema
+## brain-even
 
 https://asciinema.org/a/YfhsVwSuuYLYnJQZ3rKWioPzM
+
+## brain-calc
+
+https://asciinema.org/a/2uPm952QBV85IAyRDkK6ndnLG
+
 
 
 
