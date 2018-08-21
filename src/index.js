@@ -7,5 +7,3 @@ export const brainGames = () => {
 
   console.log(`Hello, ${userName}!`);
 };
-
-export default brainGames;

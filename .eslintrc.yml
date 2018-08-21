@@ -1,7 +1,6 @@
 ---
 
 plugins:
-  - flowtype
   - babel
 
 env:
