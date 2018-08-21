@@ -13,9 +13,7 @@ $ make install
 ```
 ## asciinema
 
-```
-(https://asciinema.org/a/ib7fVnMnS1PHeaAE8NAqRdDYq)
+https://asciinema.org/a/ib7fVnMnS1PHeaAE8NAqRdDYq
 
-```
 
 
