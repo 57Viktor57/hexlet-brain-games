@@ -1,6 +1,6 @@
 {
   "name": "viktor_ku_hexlet_project",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Viktor Kugay first hexlet project",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",

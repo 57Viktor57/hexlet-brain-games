@@ -1,29 +1,54 @@
 import readlineSync from 'readline-sync';
-import evenYesOrNo from './evenYesOrNo';
+import evenYesOrNo from './games/evenYesOrNo';
+import calc from './games/calc';
 
-const brainGames = () => {
-  console.log('Welcome to the Brain Games!\n');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+const rules = {
+  brainEven: 'Answer "yes" if number even otherwise answer "no".\n',
+  brainCalc: 'What is the result of the expression?\n',
 };
 
+const whoAreYou = () => readlineSync.question('May I have your name? ');
 
-const brainEven = () => {
-  console.log('Welcome to the Brain Games!\nAnswer "yes" if number even otherwise answer "no".\n');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!\n`);
-
+const game = (func, userName) => {
   for (let i = 0; i < 3; i += 1) {
-    const game = evenYesOrNo();
-    if (game.compare) {
+    const data = func();
+    if (data.compare) {
       console.log('Correct!');
     } else {
-      console.log(`'${game.userAnswer}' is wrong answer ;(. Correct answer was '${
-        game.answer}'.\nLet's try again, ${userName}!`);
+      console.log(`'${data.userAnswer}' is wrong answer ;(. Correct answer was '${
+        data.answer}'.\nLet's try again, ${userName}!`);
       return;
     }
   }
+};
+
+console.log('Welcome to the Brain Games!');
+
+const brainGames = () => {
+  const userName = whoAreYou();
+  console.log(`Hello, ${userName}!`);
+};
+
+const brainEven = () => {
+  console.log(rules.brainEven);
+
+  const userName = whoAreYou();
+  console.log(`Hello, ${userName}!\n`);
+
+  game(evenYesOrNo, userName);
+
   console.log(`Congratulations, ${userName}!`);
 };
 
-export { brainEven, brainGames };
+const brainCalc = () => {
+  console.log(rules.brainCalc);
+
+  const userName = whoAreYou();
+  console.log(`Hello, ${userName}!\n`);
+
+  game(calc, userName);
+
+  console.log(`Congratulations, ${userName}!`);
+};
+
+export { brainEven, brainGames, brainCalc };
