@@ -1,6 +1,6 @@
 {
   "name": "viktor_ku_hexlet_project",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Viktor Kugay first hexlet project",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
@@ -25,7 +25,7 @@
     "first",
     "project"
   ],
-  "author": "",
+  "author": "viktor_ku",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/57Viktor57/project-lvl1-s328/issues"

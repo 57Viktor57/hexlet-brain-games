@@ -5,8 +5,8 @@ export default () => {
   const operations = ['*', '-', '+', '/'];
   const operands = [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10)]
     .sort((a, b) => b - a);
-  const operation = operations[Math.floor(Math.random() * 3)];
-  const question = `${operands[0]} ${operation} ${operands[1]}`;
+  const currentOperation = operations[Math.floor(Math.random() * 3)];
+  const question = `${operands[0]} ${currentOperation} ${operands[1]}`;
 
   console.log(`Question: ${question}`);
 

@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import gamePattern from './gamePattern';
 import evenYesOrNo from './games/evenYesOrNo';
 import calc from './games/calc';
 
@@ -9,19 +10,6 @@ const rules = {
 
 const whoAreYou = () => readlineSync.question('May I have your name? ');
 
-const game = (func, userName) => {
-  for (let i = 0; i < 3; i += 1) {
-    const data = func();
-    if (data.compare) {
-      console.log('Correct!');
-    } else {
-      return `'${data.userAnswer}' is wrong answer ;(. Correct answer was '${
-        data.answer}'.\nLet's try again, ${userName}!`;
-    }
-  }
-  return `Congratulations, ${userName}!`;
-};
-
 console.log('Welcome to the Brain Games!');
 
 const brainEven = () => {
@@ -30,7 +18,7 @@ const brainEven = () => {
   const userName = whoAreYou();
   console.log(`Hello, ${userName}!\n`);
 
-  console.log(game(evenYesOrNo, userName));
+  console.log(gamePattern(evenYesOrNo, userName));
 };
 
 const brainCalc = () => {
@@ -39,7 +27,7 @@ const brainCalc = () => {
   const userName = whoAreYou();
   console.log(`Hello, ${userName}!\n`);
 
-  console.log(game(calc, userName));
+  console.log(gamePattern(calc, userName));
 };
 
 export { brainEven, brainCalc };
