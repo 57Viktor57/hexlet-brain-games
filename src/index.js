@@ -4,6 +4,7 @@ const rules = {
   brainEvenRul: 'Answer "yes" if number even otherwise answer "no".\n',
   brainCalcRul: 'What is the result of the expression?\n',
   brainGcdRul: 'Find the greatest common divisor of given numbers.\n',
+  brainBalanceRul: 'Balance the given number.\n',
 };
 
 const gameEngine = (game, rul) => {

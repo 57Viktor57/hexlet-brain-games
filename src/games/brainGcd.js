@@ -12,11 +12,13 @@ const gcd = (firstNum, secondNum) => {
 };
 
 export default () => {
-  const data = {};
   const operands = [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)]
     .sort((a, b) => b - a);
-  data.question = `${operands[0]} ${operands[1]}`;
-  data.answer = gcd(operands[0], operands[1]);
+
+  const data = {
+    question: `${operands[0]} ${operands[1]}`,
+    answer: gcd(operands[0], operands[1]),
+  };
 
   return data;
 };
