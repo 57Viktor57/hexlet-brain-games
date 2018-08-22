@@ -1,5 +1,5 @@
 export default (func, userName) => {
-  for (let counter = 0; counter < 3; counter += 1) {
+  for (let roundCounter = 0; roundCounter < 3; roundCounter += 1) {
     const data = func();
     if (data.compare) {
       console.log('Correct!');
