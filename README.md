@@ -23,6 +23,11 @@ https://asciinema.org/a/2uPm952QBV85IAyRDkK6ndnLG
 
 https://asciinema.org/a/7jZd0K2T6PmIRsE2NrWmCJVbg
 
+# brain-balance
+
+https://asciinema.org/a/evWui6rwbQwzde1aObSoN05py
+
+
 
 
 
