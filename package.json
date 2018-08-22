@@ -1,6 +1,6 @@
 {
   "name": "viktor_ku_hexlet_project",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Viktor Kugay first hexlet project",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",

@@ -1,40 +1,30 @@
 import readlineSync from 'readline-sync';
-import gamePattern from './gamePattern';
-import evenYesOrNo from './games/evenYesOrNo';
-import calc from './games/calc';
-import gcd from './games/gcd';
-
 
 const rules = {
-  brainEven: 'Answer "yes" if number even otherwise answer "no".\n',
-  brainCalc: 'What is the result of the expression?\n',
-  brainGcd: 'Find the greatest common divisor of given numbers.\n',
+  brainEvenRul: 'Answer "yes" if number even otherwise answer "no".\n',
+  brainCalcRul: 'What is the result of the expression?\n',
+  brainGcdRul: 'Find the greatest common divisor of given numbers.\n',
 };
 
-const whoYouAre = () => {
+const gameEngine = (game, rul) => {
+  console.log(`Welcome to the Brain Games!\n${rules[rul]}`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
-  return userName;
+
+  for (let roundCounter = 0; roundCounter < 3; roundCounter += 1) {
+    const data = game();
+    console.log(`Question: ${data.question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer === data.answer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${
+        data.answer}'.\nLet's try again, ${userName}!`);
+      return;
+    }
+  }
+
+  console.log(`Congratulations, ${userName}!`);
 };
 
-console.log('Welcome to the Brain Games!');
-
-const brainEven = () => {
-  console.log(rules.brainEven);
-  const userName = whoYouAre();
-  console.log(gamePattern(evenYesOrNo, userName));
-};
-
-const brainCalc = () => {
-  console.log(rules.brainCalc);
-  const userName = whoYouAre();
-  console.log(gamePattern(calc, userName));
-};
-
-const brainGcd = () => {
-  console.log(rules.brainGcd);
-  const userName = whoYouAre();
-  console.log(gamePattern(gcd, userName));
-};
-
-export { brainEven, brainCalc, brainGcd };
+export default gameEngine;
