@@ -1,7 +1,7 @@
 import gameEngine from '..';
 import generateNum from '../utils';
 
-const rul = 'What is the result of the expression?\n';
+const rul = 'What is the result of the expression?';
 const funcForOperations = [(a, b) => a + b, (a, b) => a - b, (a, b) => a * b, (a, b) => a / b];
 const operations = ['+', '-', '*', '/'];
 

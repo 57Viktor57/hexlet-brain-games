@@ -1,7 +1,7 @@
 import gameEngine from '..';
 import generateNum from '../utils';
 
-const rul = 'Find the greatest common divisor of given numbers.\n';
+const rul = 'Find the greatest common divisor of given numbers.';
 
 const getGcdNum = (firstNum, secondNum) => {
   let a = firstNum;

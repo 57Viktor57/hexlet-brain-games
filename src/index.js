@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 const attempts = 3;
 
 const gameEngine = (game, rulesForGame) => {
-  console.log(`Welcome to the Brain Games!\n`);
+  console.log('Welcome to the Brain Games!\n');
   console.log(rulesForGame);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);

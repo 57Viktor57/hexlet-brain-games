@@ -1,7 +1,7 @@
 import gameEngine from '..';
 import { generateRandomNum, isEven } from '../utils';
 
-const rul = 'Balance the given number.\n';
+const rul = 'Balance the given number.';
 const progressionLength = 10;
 const evenOdd = num => num + 2;
 const multiple = num => num * 2;
