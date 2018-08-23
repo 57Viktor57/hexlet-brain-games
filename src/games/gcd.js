@@ -1,6 +1,8 @@
 import gameEngine from '..';
 import generateNum from '../utils';
 
+const rul = 'Find the greatest common divisor of given numbers.\n';
+
 const getGcdNum = (firstNum, secondNum) => {
   let a = firstNum;
   let b = secondNum;
@@ -26,6 +28,6 @@ const gcd = () => {
   return data;
 };
 
-gameEngine(gcd, 'gcdRul');
+gameEngine(gcd, rul);
 
 export default gcd;

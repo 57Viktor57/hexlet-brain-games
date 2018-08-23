@@ -1,6 +1,7 @@
 import gameEngine from '..';
 import generateNum from '../utils';
 
+const rul = 'Answer "yes" if number even otherwise answer "no".\n';
 const isEven = num => num % 2 === 0;
 
 const even = () => {
@@ -12,6 +13,6 @@ const even = () => {
   return data;
 };
 
-gameEngine(even, 'evenRul');
+gameEngine(even, rul);
 
 export default even;
