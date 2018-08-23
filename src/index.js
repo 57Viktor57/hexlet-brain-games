@@ -3,9 +3,9 @@ import readlineSync from 'readline-sync';
 const attempts = 3;
 
 const gameEngine = (game, rulesForGame) => {
-  console.log('Welcome to the Brain Games!\n');
+  console.log('Welcome to the Brain Games!');
   console.log(rulesForGame);
-  const userName = readlineSync.question('May I have your name? ');
+  const userName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
   for (let startCounter = 0; startCounter < attempts; startCounter += 1) {
