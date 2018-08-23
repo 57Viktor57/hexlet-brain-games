@@ -1,7 +1,7 @@
 import gameEngine from '..';
 import { generateRandomNum } from '../utils';
 
-const rul = 'Balance the given number.';
+const rulesForGame = 'Balance the given number.';
 const progressionLength = 10;
 
 const progression = () => {
@@ -24,6 +24,6 @@ const progression = () => {
   return data;
 };
 
-gameEngine(progression, rul);
+gameEngine(progression, rulesForGame);
 
 export default progression;
