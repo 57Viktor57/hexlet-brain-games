@@ -2,4 +2,4 @@ const generateRandomNum = (min, max) => Math.floor(min + Math.random() * (max + 
 
 const isEven = num => num % 2 === 0;
 
-export { isEven, generateRandomNum }
+export { isEven, generateRandomNum };
