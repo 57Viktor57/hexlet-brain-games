@@ -1,8 +1,8 @@
 import gameEngine from '..';
-import generateNum from '../utils';
+import generateRandomNum from '../utils';
 
 const rul = 'Balance the given number.\n';
-const numLength = generateNum(3, 4);
+const numLength = generateRandomNum(3, 4);
 
 const getBalanceNum = (num) => {
   const arrayNum = num.toString().split('');
@@ -21,7 +21,7 @@ const getBalanceNum = (num) => {
 const balance = () => {
   let numForGame = '';
   for (let counter = 0; counter < numLength; counter += 1) {
-    numForGame += generateNum(0, 1);
+    numForGame += generateRandomNum(0, 9);
   }
 
   const data = {
