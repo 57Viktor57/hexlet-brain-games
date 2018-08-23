@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
 
 const rules = {
-  brainEvenRul: 'Answer "yes" if number even otherwise answer "no".\n',
-  brainCalcRul: 'What is the result of the expression?\n',
-  brainGcdRul: 'Find the greatest common divisor of given numbers.\n',
-  brainBalanceRul: 'Balance the given number.\n',
+  evenRul: 'Answer "yes" if number even otherwise answer "no".\n',
+  calcRul: 'What is the result of the expression?\n',
+  gcdRul: 'Find the greatest common divisor of given numbers.\n',
+  balanceRul: 'Balance the given number.\n',
 };
 
 const gameEngine = (game, rul) => {
@@ -12,15 +12,16 @@ const gameEngine = (game, rul) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
-  for (let roundCounter = 0; roundCounter < 3; roundCounter += 1) {
-    const data = game();
-    console.log(`Question: ${data.question}`);
+  const endCounter = 3;
+  for (let startCounter = 0; startCounter < endCounter; startCounter += 1) {
+    const { question, answer } = game();
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === data.answer) {
+    if (userAnswer === answer) {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${
-        data.answer}'.\nLet's try again, ${userName}!`);
+        answer}'.\nLet's try again, ${userName}!`);
       return;
     }
   }

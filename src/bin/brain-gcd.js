@@ -1,6 +1,5 @@
 #! /usr/bin/env node
 
-import gameEngine from '..';
-import brainGcd from '../games/brainGcd';
+import gcd from '../games/gcd';
 
-gameEngine(brainGcd, 'brainGcdRul');
+gcd();

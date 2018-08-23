@@ -1,6 +1,5 @@
 #! /usr/bin/env node
 
-import gameEngine from '..';
-import brainBalance from '../games/brainBalance';
+import balance from '../games/balance';
 
-gameEngine(brainBalance, 'brainBalanceRul');
+balance();
