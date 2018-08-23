@@ -27,6 +27,11 @@ https://asciinema.org/a/7jZd0K2T6PmIRsE2NrWmCJVbg
 
 https://asciinema.org/a/evWui6rwbQwzde1aObSoN05py
 
+## brain-progression
+
+https://asciinema.org/a/0hWGzfANbWUvwzGHfWe9BVnd8
+
+
 
 
 
