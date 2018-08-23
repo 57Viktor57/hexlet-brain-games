@@ -1,7 +1,7 @@
 import gameEngine from '..';
-import generateRandomNum from '../utils';
+import { generateRandomNum } from '../utils';
 
-const rul = 'Balance the given number.\n';
+const rulesForGame = 'Balance the given number.\n';
 const numLength = generateRandomNum(3, 4);
 
 const getBalanceNum = (num) => {
@@ -31,6 +31,6 @@ const balance = () => {
   return data;
 };
 
-gameEngine(balance, rul);
+gameEngine(balance, rulesForGame);
 
 export default balance;
