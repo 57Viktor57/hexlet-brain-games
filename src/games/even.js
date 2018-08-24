@@ -1,11 +1,11 @@
 import gameEngine from '..';
-import generateNum from '../utils';
+import getRandomNum from '../utils';
 
-const rul = 'Answer "yes" if number even otherwise answer "no".';
+const rulesForGame = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = num => num % 2 === 0;
 
 const even = () => {
-  const operand = generateNum(1, 100);
+  const operand = getRandomNum(1, 100);
   const data = {
     question: `${operand}`,
     answer: isEven(operand) ? 'yes' : 'no',
@@ -13,6 +13,6 @@ const even = () => {
   return data;
 };
 
-gameEngine(even, rul);
+gameEngine(even, rulesForGame);
 
 export default even;

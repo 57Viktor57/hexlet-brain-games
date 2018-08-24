@@ -1,23 +1,23 @@
 import gameEngine from '..';
-import generateNum from '../utils';
+import getRandomNum from '../utils';
 
-const rul = 'What is the result of the expression?';
+const rulesForGame = 'What is the result of the expression?';
 const funcForOperations = [(a, b) => a + b, (a, b) => a - b, (a, b) => a * b, (a, b) => a / b];
 const operations = ['+', '-', '*', '/'];
 
 const calc = () => {
-  const firstNum = generateNum(1, 100);
-  const secondNum = generateNum(1, 100);
-  const currentOperation = generateNum(0, 3);
+  const firstOperand = getRandomNum(1, 100);
+  const secondOperand = getRandomNum(1, 100);
+  const currentOperation = getRandomNum(0, 3);
 
   const data = {
-    question: `${firstNum} ${operations[currentOperation]} ${secondNum}`,
-    answer: `${funcForOperations[currentOperation](firstNum, secondNum)}`,
+    question: `${firstOperand} ${operations[currentOperation]} ${secondOperand}`,
+    answer: `${funcForOperations[currentOperation](firstOperand, secondOperand)}`,
   };
 
   return data;
 };
 
-gameEngine(calc, rul);
+gameEngine(calc, rulesForGame);
 
 export default calc;

@@ -11,6 +11,11 @@
 ```sh
 $ make install
 ```
+
+## brain-prime
+
+https://asciinema.org/a/hPFbF9fO9AJg5wbfQcRGia5f1
+
 ## brain-even
 
 https://asciinema.org/a/YfhsVwSuuYLYnJQZ3rKWioPzM
@@ -30,6 +35,7 @@ https://asciinema.org/a/evWui6rwbQwzde1aObSoN05py
 ## brain-progression
 
 https://asciinema.org/a/0hWGzfANbWUvwzGHfWe9BVnd8
+
 
 
 

@@ -1,5 +1,5 @@
 import gameEngine from '..';
-import { generateRandomNum } from '../utils';
+import getRandomNum from '../utils';
 
 const rulesForGame = 'Balance the given number.';
 
@@ -18,7 +18,7 @@ const getBalanceNum = (num) => {
 };
 
 const balance = () => {
-  const numForGame = generateRandomNum(100, 9999);
+  const numForGame = getRandomNum(100, 9999);
 
   const data = {
     answer: getBalanceNum(numForGame),

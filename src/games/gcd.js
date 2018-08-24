@@ -1,11 +1,11 @@
 import gameEngine from '..';
-import generateNum from '../utils';
+import getRandomNum from '../utils';
 
-const rul = 'Find the greatest common divisor of given numbers.';
+const rulesForGame = 'Find the greatest common divisor of given numbers.';
 
-const getGcdNum = (firstNum, secondNum) => {
-  let a = firstNum;
-  let b = secondNum;
+const getGcdNum = (firstOperand, secondOperand) => {
+  let a = firstOperand;
+  let b = secondOperand;
   while (a !== 0 && b !== 0) {
     if (a > b) {
       a %= b;
@@ -17,17 +17,17 @@ const getGcdNum = (firstNum, secondNum) => {
 };
 
 const gcd = () => {
-  const firstNum = generateNum(1, 100);
-  const secondNum = generateNum(1, 100);
+  const firstOperand = getRandomNum(1, 100);
+  const secondOperand = getRandomNum(1, 100);
 
   const data = {
-    question: `${firstNum} ${secondNum}`,
-    answer: `${getGcdNum(firstNum, secondNum)}`,
+    question: `${firstOperand} ${secondOperand}`,
+    answer: `${getGcdNum(firstOperand, secondOperand)}`,
   };
 
   return data;
 };
 
-gameEngine(gcd, rul);
+gameEngine(gcd, rulesForGame);
 
 export default gcd;
