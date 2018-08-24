@@ -2,11 +2,12 @@ import gameEngine from '..';
 import getRandomNum from '../utils';
 
 const rulesForGame = 'Is this number prime?';
+const minPrimeNumber = 2;
 
-const checkPrime = (num) => {
-  if (num === 1) return 'no';
-  for (let i = 2; i < num; i += 1) {
-    if (num % i === 0) {
+const checkPrime = (checkingNumber) => {
+  if (checkingNumber === 1) return 'no';
+  for (let divisor = minPrimeNumber; divisor < checkingNumber; divisor += 1) {
+    if (checkingNumber % divisor === 0) {
       return 'no';
     }
   }
