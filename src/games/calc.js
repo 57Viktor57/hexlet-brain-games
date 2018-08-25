@@ -1,14 +1,16 @@
-import gameEngine from '..';
+import gameEngine from '../gameEngine';
 import getRandomNum from '../utils';
 
-const rulesForGame = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 const funcForOperations = [(a, b) => a + b, (a, b) => a - b, (a, b) => a * b, (a, b) => a / b];
 const operations = ['+', '-', '*', '/'];
+const minGameNum = 1;
+const maxGameNum = 100;
 
 const calc = () => {
-  const firstOperand = getRandomNum(1, 100);
-  const secondOperand = getRandomNum(1, 100);
-  const currentOperation = getRandomNum(0, 3);
+  const firstOperand = getRandomNum(minGameNum, maxGameNum);
+  const secondOperand = getRandomNum(minGameNum, maxGameNum);
+  const currentOperation = getRandomNum(0, operations.length - 1);
 
   const data = {
     question: `${firstOperand} ${operations[currentOperation]} ${secondOperand}`,
@@ -18,6 +20,6 @@ const calc = () => {
   return data;
 };
 
-gameEngine(calc, rulesForGame);
+const startGame = () => gameEngine(calc, description);
 
-export default calc;
+export default startGame;

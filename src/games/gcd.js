@@ -1,7 +1,9 @@
-import gameEngine from '..';
+import gameEngine from '../gameEngine';
 import getRandomNum from '../utils';
 
-const rulesForGame = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers';
+const minGameNum = 1;
+const maxGameNum = 100;
 
 const getGcdNum = (firstOperand, secondOperand) => {
   let a = firstOperand;
@@ -17,8 +19,8 @@ const getGcdNum = (firstOperand, secondOperand) => {
 };
 
 const gcd = () => {
-  const firstOperand = getRandomNum(1, 100);
-  const secondOperand = getRandomNum(1, 100);
+  const firstOperand = getRandomNum(minGameNum, maxGameNum);
+  const secondOperand = getRandomNum(minGameNum, maxGameNum);
 
   const data = {
     question: `${firstOperand} ${secondOperand}`,
@@ -28,6 +30,6 @@ const gcd = () => {
   return data;
 };
 
-gameEngine(gcd, rulesForGame);
+const startGame = () => gameEngine(gcd, description);
 
-export default gcd;
+export default startGame;

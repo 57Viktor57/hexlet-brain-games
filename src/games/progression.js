@@ -1,29 +1,32 @@
-import gameEngine from '..';
+import gameEngine from '../gameEngine';
 import getRandomNum from '../utils';
 
-const rulesForGame = 'Balance the given number.';
+const description = 'Balance the given number';
 const progressionLength = 10;
 
 const progression = () => {
   const startNum = getRandomNum(1, 9);
   const stepProgress = getRandomNum(1, 9);
-  const progr = [startNum];
-  for (let counter = 0; counter < progressionLength - 1; counter += 1) {
-    const nextNum = progr[counter] + stepProgress;
-    progr.push(nextNum);
+  const currentProgression = [];
+
+  for (let counter = 0; counter < progressionLength; counter += 1) {
+    const nextNum = startNum + stepProgress * counter;
+    currentProgression.push(nextNum);
   }
-  const randomeSpace = getRandomNum(0, 9);
-  const answer = `${progr[randomeSpace]}`;
-  progr[randomeSpace] = '..';
+
+  const randomeSpace = getRandomNum(0, progressionLength - 1);
+  const answer = `${currentProgression[randomeSpace]}`;
+  currentProgression[randomeSpace] = '..';
+  const question = currentProgression.join(' ');
 
   const data = {
     answer,
-    question: progr.join(' '),
+    question,
   };
 
   return data;
 };
 
-gameEngine(progression, rulesForGame);
+const startGame = () => gameEngine(progression, description);
 
-export default progression;
+export default startGame;

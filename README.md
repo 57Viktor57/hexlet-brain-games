@@ -12,6 +12,11 @@
 $ make install
 ```
 
+## brain-games
+
+https://asciinema.org/a/vbF4mGsIk89q5zywCkMsdwG0l
+
+
 ## brain-prime
 
 https://asciinema.org/a/hPFbF9fO9AJg5wbfQcRGia5f1

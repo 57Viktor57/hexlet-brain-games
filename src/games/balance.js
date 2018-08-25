@@ -1,7 +1,9 @@
-import gameEngine from '..';
+import gameEngine from '../gameEngine';
 import getRandomNum from '../utils';
 
-const rulesForGame = 'Balance the given number.';
+const description = 'Balance the given number';
+const minGameNum = 100;
+const maxGameNum = 9999;
 
 const getBalanceNum = (num) => {
   const arrayNum = num.toString().split('');
@@ -18,7 +20,7 @@ const getBalanceNum = (num) => {
 };
 
 const balance = () => {
-  const numForGame = getRandomNum(100, 9999);
+  const numForGame = getRandomNum(minGameNum, maxGameNum);
 
   const data = {
     answer: getBalanceNum(numForGame),
@@ -27,6 +29,6 @@ const balance = () => {
   return data;
 };
 
-gameEngine(balance, rulesForGame);
+const startGame = () => gameEngine(balance, description);
 
-export default balance;
+export default startGame;

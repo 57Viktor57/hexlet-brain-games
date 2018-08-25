@@ -1,28 +1,30 @@
-import gameEngine from '..';
+import gameEngine from '../gameEngine';
 import getRandomNum from '../utils';
 
-const rulesForGame = 'Is this number prime?';
+const description = 'Is this number prime?';
 const minPrimeNumber = 2;
+const minGameNum = 1;
+const maxGameNum = 100;
 
-const checkPrime = (checkingNumber) => {
-  if (checkingNumber === 1) return 'no';
+const isPrime = (checkingNumber) => {
+  if (checkingNumber === 1) return false;
   for (let divisor = minPrimeNumber; divisor < checkingNumber; divisor += 1) {
     if (checkingNumber % divisor === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
 const prime = () => {
-  const randomNum = getRandomNum(1, 100);
+  const randomNum = getRandomNum(minGameNum, maxGameNum);
   const data = {
-    answer: checkPrime(randomNum),
+    answer: isPrime(randomNum) ? 'yes' : 'no',
     question: randomNum,
   };
   return data;
 };
 
-gameEngine(prime, rulesForGame);
+const startGame = () => gameEngine(prime, description);
 
-export default prime;
+export default startGame;
