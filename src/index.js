@@ -12,13 +12,20 @@ const mainMenu = () => {
     let resultGame = selectedGame();
     while (!resultGame.result) {
       console.log(`\n'${resultGame.userAnswer}' is wrong answer ;(. Correct answer was '${
-        resultGame.answer}'.\nLet's try again, ${userName}!`);
-      resultGame = selectedGame();
+        resultGame.answer}'.`);
+      const tryGameQuestion = readlineSync.keyInYN(`Try again, ${userName}?`);
+      if (tryGameQuestion) {
+        console.log('Let\'s play!\n');
+        resultGame = selectedGame();
+      } else {
+        console.log('\nGood by ;-)');
+        return;
+      }
     }
-    console.log(`Congratulations, ${userName}!`);
+    console.log(`\nCongratulations, ${userName}!`);
     const anotherGameQuestion = readlineSync.keyInYN('Do you want to play another game?');
     if (!anotherGameQuestion) {
-      console.log('Good by ;-)');
+      console.log('\nGood by ;-)');
       state = false;
     }
   }
